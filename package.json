@@ -1,0 +1,59 @@
+{
+  "name": "addressbook",
+  "version": "1.0.0",
+  "description": "NodeJS Nights Final Project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js | pino-pretty",
+    "lint": "eslint .",
+    "test": "npx mocha --opts ./tests/mocha.opts ./test",
+    "test:coverage:local": "npx nyc mocha --opts ./test/mocha.opts ./test",
+    "test:coverage:report": "npx nyc report mocha --opts ./tests/mocha.opts ./test --reporter=text-lcov > ./test/coverage/coverage.lcov",
+    "migrate:make": "knex migrate:make --knexfile ./database/knexfile.js",
+    "db:migrate": "knex migrate:latest --knexfile ./database/knexfile.js",
+    "db:rollback": "knex migrate:rollback --knexfile ./database/knexfile.js",
+    "infra": "docker-compose up -d",
+    "infra:stop": "docker-compose down"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "CRUD"
+  ],
+  "author": "Martin Bencik",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "3.0.2",
+    "crypto": "1.0.1",
+    "dotenv": "6.1.0",
+    "firebase-admin": "^6.4.0",
+    "firebase-functions": "^2.1.0",
+    "jsonschema": "1.2.4",
+    "jsonwebtoken": "8.3.0",
+    "kcors": "2.2.2",
+    "knex": "0.15.2",
+    "knex-generic-errors": "0.1.5",
+    "koa": "2.5.3",
+    "koa-body": "4.0.4",
+    "koa-compress": "3.0.0",
+    "koa-router": "7.4.0",
+    "npm": "^6.5.0",
+    "objection": "1.4.0",
+    "pg": "7.6.1",
+    "pino": "5.8.0",
+    "ramda": "0.25.0"
+  },
+  "devDependencies": {
+    "@strv/eslint-config-javascript": "8.3.0",
+    "chai": "4.2.0",
+    "codecov": "3.1.0",
+    "eslint": "5.7.0",
+    "mocha": "5.2.0",
+    "node-fetch": "2.3.0",
+    "nodemon": "1.18.4",
+    "pino-pretty": "2.2.2",
+    "sinon": "7.1.1",
+    "supertest-koa-agent": "0.3.0",
+    "chance": "1.0.16"
+  }
+}

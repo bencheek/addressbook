@@ -1,0 +1,46 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- 11.0.0
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - node_modules
+services:
+- docker
+env:
+  global:
+  - NODE_ENV=test
+  - secure: LiDevDd3JIyGnX3eunY3mN/4lZqgjyzDvaukX6O18GdGRdy0YZGjc8j1HvwyHC+754sgAfkAMgVZ/lTQq5KB5HYe5+WZcA7hcI6l9a/h4EITuHERND9PpRcjzPyg6wo1Z5BlsvyaPWz9Z4IhVNAmoo+VHDfKa4/LRsBk4vI3+xnR9Js1U9jqYQaC7xfbjLSxZVBZgk792PxVdyDXuQ+qPMYR6hyKbhQ/BrUAoDDii4F7xhDOwZ6KQqY6ErPvXTjiz/yXjMVEEv8PLVTI77wFuvDPbZf8xcbW6pOHkNpfh8EsRc9/HiGpucRCYoW/0oFzgmpmQcRGMO9MCn/+CYQHl0DdMxihcREUqOboLrpIRWkdsizO/hij32WSJQhSjhbmyB0hBc1RtqVpYejPTT7ovSECtoxoVpB2KH3ZBJYKP3W4xfmzIQZ4dU5tCRAtYy17znG2d63zd+UNr2vPSqJJpQQC1FXL1LFxlHehqDDMFhk8ebiwhHrgQ+ouXvCZgosnQyuh5dcm0MIzu2BjvrlwZO4AZ4B+ZEZOa670vkdEC2BrzwrHyPi9uR7naU+dvF4g4tyLGmo6Sh7+9Hyb/4MX2rvUb95K9Mi/e0BwdSkI/1QC66T/k86LBno4ZSZe97lWOHZ2I9549HIuq3y7BG8MF4vu7HMUutrdngCTIL8tEoc=
+install:
+- npm install
+before_script:
+- sudo service postgresql stop
+- docker ps
+- npm run infra
+- sleep 5
+- npm run db:migrate
+script:
+- npm run test:coverage:report
+after_success:
+- "echo Upload code coverage \U0001F4AA"
+- "./node_modules/.bin/codecov"
+deploy:
+- provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: "u/E/GQNWCEe7J91jZrkAWZzeOMvIjaP3b815VRKZdw0Bi2/t3fCV0AStX6X9G1IQPHHAY1UlImdnlTJmYsecVUSJby8XCG6la3I8qNC46cdtIROWG74Adpa9GgDkoWI5qW6NzM/3/XjTlob7HOn2DeHDss6jGrcsvEO9EaMSi3fiH5CzjFPuc3uqHZjPI
+oxcIRImIHfbvnl1l5y7JVcb2/23YdVqFiAw3yJDQSStVv+ZgAY3yKFkl5hTjA6sHLHZ85TbrUfa8pq2eW944iR3YFz2ueucQ4p0uBuE+OuSp7U5x8GRKYsvHFRJ+GIxGfwSMDyQzkxavGHdiCs/WKw8AQF44zX8rDVoRAQk89yO6+yhNdqmnamU9M5TeIgtknF7BHINg
+Vx59FmbzN7G+/AOWQQBBbsf8hGBL8gCZbQr6Kg+3He2Tp00o5IFz1v6AHe8/ToBYiK0nJfYXiWjwMw/ZeQtXGO+g32aSD3/Mp6jzNdV0d1o+mHjSYUY1JWL8MbUsBjlzAnf7ZYnQNwru4EYOaCMFGbzs50V991Rnxaxbl4Q9qELjPJXLMBmIl6c/PDmFKKi+vftdvHy+
+ctXti9lv+lvpfU1mQtc/O6vx4VK8QC/ZdAsvSRvqPgDln3xzfTyD2RVEDzWxS0GCjPUgr2F4EYv88BVdqBHEx/HwhmrRDs="
+  app: dogbook-nodejsnights
+  strategy: git
+  on:
+    branch:
+    - master
+    repo: addressbook
+notifications:
+  email: false

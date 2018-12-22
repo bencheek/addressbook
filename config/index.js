@@ -14,13 +14,13 @@ const R = require('ramda')
 // We need dynamic requires here to ensure that .env is loaded beforehand
 const envConfigPath = `./env/${env}`
 const envConfig = require(envConfigPath)
+const admin = require('firebase-admin')
+const serviceAccount = require('../serviceAccountKey.json')
 const defaultConfig = require('./default')(env)
 
 // Override default values with values from environment config
 const resultConfig = R.mergeDeepRight(defaultConfig, envConfig)
 
-const admin = require('firebase-admin')
-const serviceAccount = require('../serviceAccountKey.json')
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),

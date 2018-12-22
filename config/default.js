@@ -56,6 +56,7 @@ module.exports = env => ({
     },
   },
   firebase: {
-    realTimeDbUrl: 'https://address-book-672f4.firebaseio.com',
+    realTimeDbUrl: process.env.FIREBASE_DB_URL
+    || 'https://address-book-672f4.firebaseio.com',
   },
 })

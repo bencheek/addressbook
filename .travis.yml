@@ -27,7 +27,7 @@ script:
 - npm run test:coverage:report
 after_success:
 - "echo Upload code coverage \U0001F4AA"
-- "./node_modules/.bin/codecov"
+
 deploy:
 - provider: heroku
   skip_cleanup: true

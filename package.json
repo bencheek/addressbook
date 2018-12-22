@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "nodemon src/app.js | pino-pretty",
     "lint": "eslint .",
-    "test:coverage:local": "nyc mocha --opts ./test/mocha.opts ./test",
-    "test:coverage:report": "nyc report mocha --opts ./test/mocha.opts ./test && codecov",
+    "test": "nyc mocha --opts ./test/mocha.opts ./test",
+    "test:coverage": "nyc report mocha --opts ./test/mocha.opts ./test",
+    "test:coverage:upload": "nyc codecov --disable=gcov",
     "migrate:make": "knex migrate:make --knexfile ./database/knexfile.js",
     "db:migrate": "knex migrate:latest --knexfile ./database/knexfile.js",
     "db:rollback": "knex migrate:rollback --knexfile ./database/knexfile.js",

@@ -6,11 +6,12 @@
     "text-summary"
   ],
   "include": [
-    "src/**/*.js"
+    "**/*.js"
   ],
   "exclude": [
-    "src/config",
-    "src/app.js",
-    "src/database/migrations/*"
+    "config",
+    "coverage",
+    "app.js",
+    "database/migrations/*"
   ]
 }

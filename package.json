@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "test": "npx mocha --opts ./tests/mocha.opts ./test",
     "test:coverage:local": "npx nyc mocha --opts ./test/mocha.opts ./test",
-    "test:coverage:report": "NODE_ENV=test npx nyc report mocha --opts ./tests/mocha.opts ./test",
+    "test:coverage:report": "npx nyc report mocha --opts ./tests/mocha.opts ./test --reporter=text-lcov > ./test/coverage/coverage.lcov",
     "migrate:make": "knex migrate:make --knexfile ./database/knexfile.js",
     "db:migrate": "knex migrate:latest --knexfile ./database/knexfile.js",
     "db:rollback": "knex migrate:rollback --knexfile ./database/knexfile.js",

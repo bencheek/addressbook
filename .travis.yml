@@ -23,6 +23,8 @@ before_script:
 - npm run infra
 - sleep 5
 - npm run db:migrate
+- mkdir -p test/coverage
+
 script:
 - npm run test:coverage:report
 after_success:

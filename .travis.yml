@@ -26,10 +26,11 @@ before_script:
 - mkdir -p .nyc_output
 - mkdir -p test/coverage
 - touch test/coverage/coverage.lcov
+- chmod 777 test/coverage/coverage.lcov
 script:
 - npm run test:coverage:report
 after_success:
-- echo "Upload code coverage \U0001F4AA"
+- "echo Upload code coverage \U0001F4AA"
 - ./node_modules/.bin/codecov
 deploy:
 - provider: heroku

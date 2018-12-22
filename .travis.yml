@@ -25,6 +25,7 @@ before_script:
 - npm run db:migrate
 - mkdir -p .nyc_output
 - mkdir -p ./test/coverage
+- touch ./test/coverage/coverage.lcov
 script:
 - npm run test:coverage:report
 after_success:

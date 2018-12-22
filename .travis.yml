@@ -41,6 +41,6 @@ ctXti9lv+lvpfU1mQtc/O6vx4VK8QC/ZdAsvSRvqPgDln3xzfTyD2RVEDzWxS0GCjPUgr2F4EYv88BVd
   on:
     branch:
     - master
-    repo: addressbook
+    repo: bencheek/addressbook
 notifications:
   email: false

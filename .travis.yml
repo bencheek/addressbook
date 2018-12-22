@@ -24,7 +24,7 @@ before_script:
 - sleep 5
 - npm run db:migrate
 - mkdir -p test/coverage
-
+- mkdir -p .nyc_output
 script:
 - npm run test:coverage
 after_success:

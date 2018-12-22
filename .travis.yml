@@ -23,8 +23,8 @@ before_script:
 - npm run infra
 - sleep 5
 - npm run db:migrate
+- mkdir -p .nyc_output
 script:
-- touch .nyc_output
 - npm run test:coverage:report
 after_success:
 - "echo Upload code coverage \U0001F4AA"

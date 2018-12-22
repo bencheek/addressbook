@@ -24,6 +24,7 @@ before_script:
 - sleep 5
 - npm run db:migrate
 script:
+- touch .nyc_output
 - npm run test:coverage:report
 after_success:
 - "echo Upload code coverage \U0001F4AA"

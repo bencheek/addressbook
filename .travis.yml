@@ -23,15 +23,10 @@ before_script:
 - npm run infra
 - sleep 5
 - npm run db:migrate
-- mkdir -p .nyc_output
-- mkdir -p test/coverage
-- touch test/coverage/coverage.lcov
-- chmod 777 test/coverage/coverage.lcov
 script:
 - npm run test:coverage:report
 after_success:
 - "echo Upload code coverage \U0001F4AA"
-- ls .nyc_output
 - ./node_modules/.bin/codecov
 deploy:
 - provider: heroku

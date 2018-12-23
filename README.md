@@ -116,6 +116,17 @@ NodeJs Nights 2018 / final project
     <td><b>DELETE /addresses/{addressKey}</b></td>
     <td>DELETE /addresses/-LUM4cdsecFlMKpwhIaM</td>
     <td></td>  
+  </tr>  
+  <tr>
+    <td>Update address by key for the logged user</td>
+    <td><b>PUT /addresses/{addressKey}</b></td>
+    <td>PUT /addresses/-LUM4cdsecFlMKpwhIaM <br/>
+  {
+    "firstName": "name2#",
+    "lastName": "breed2#",
+    "email": "1892#"
+}</td>
+    <td></td>  
   </tr>    
 </table>
 

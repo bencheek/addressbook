@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "NodeJS Nights Final Project",
   "main": "app.js",
+  "engines": {
+    "node": "~11.0.0",
+    "npm": "~6.4.1"
+  },
   "scripts": {
     "dev": "nodemon src/app.js | pino-pretty",
     "lint": "eslint .",
@@ -20,8 +24,15 @@
     "API",
     "CRUD"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencheek/addressbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bencheek/addressbook/issues"
+  },
   "author": "Martin Bencik",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "3.0.2",
     "crypto": "1.0.1",

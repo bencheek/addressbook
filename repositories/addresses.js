@@ -3,9 +3,9 @@
 
 const { firebaseDb } = require('../config')
 
-
 /**
  * Returns all records
+ * @param {Number} userId userId to load addresses for
  * @returns {Promisse<Array>}
  */
 function findAll(userId) {
@@ -13,8 +13,9 @@ function findAll(userId) {
 }
 
 /**
- * Return record by id
- * @param {Number} id record id
+ * Return record by key
+ * @param {Number} userId userId to load addresses for
+ * @param {String} key address key
  * @return {Promise<Address>}
  */
 function findById(userId, key) {
@@ -24,7 +25,8 @@ function findById(userId, key) {
 
 /**
  * Create record
- * @param {Object} address Dog object
+ * @param {Object} address Address object
+ * @param {Number} userId userId to load addresses for
  * @return {Promise<Address>}
  */
 function create(address, userId) {
@@ -34,7 +36,8 @@ function create(address, userId) {
 
 /**
  * Delete record by id
- * @param {String} key key of record to delete
+ * @param {Number} userId userId to load addresses for
+ * @param {String} key address key
  * @return {Promise<void>} number of deleted records
  */
 function remove(userId, key) {
@@ -43,7 +46,9 @@ function remove(userId, key) {
 }
 
 /**
- * Update a dog record
+ * Update a record
+ * @param {Number} userId userId to load addresses for
+ * @param {String} key address key
  * @param {Object} newAddressVersion new version of Address
  * @return {Promise<Address>} resulting address
  */

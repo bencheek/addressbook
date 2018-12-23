@@ -17,4 +17,25 @@ NodeJs Nights 2018 / final project
 
 <h3>API Description</h3> 
 
-POST /
+<p>
+<b>POST /users</b> - sign up user
+</p>
+<p>
+<b>Request Example</b><br/>
+{
+  "name" : "meno",
+  "email": "zaphod@beeblebr56o5hx.me",
+  "password": "Password124!"
+}
+</p>
+<p>
+<b>Response Example</b><br/>
+{
+    "name": "meno",
+    "email": "zaphod@beeblebr56o5hx.me",
+    "disabled": false,
+    "createdAt": "2018-12-23T06:40:22.300Z",
+    "id": 4,
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTU0NTU0NzIyMiwiZXhwIjoxNTQ1NTUwODIyLCJpc3MiOiJjb20uc3Rydi5ub2RlanMtbmlnaHRzLnByb2R1Y3Rpb24ifQ.7tBaaeWPrSNMQG-rkZKeu-nhpm-cnq-KlZMUkodCbWw"
+}
+</p>

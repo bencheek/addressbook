@@ -21,7 +21,7 @@ NodeJs Nights 2018 / final project
   <tr>
     <td>
       SignUp User
-    <td>
+    </td>
     <td>
       <b>POST /users</b>
     </td>

@@ -110,6 +110,12 @@ NodeJs Nights 2018 / final project
 }      
     </td>  
   </tr>    
-  
+    </tr> 
+  <tr>
+    <td>Delete address by key for the logged user</td>
+    <td><b>DELETE /addresses/{addressKey}</b></td>
+    <td>DELETE /addresses/-LUM4cdsecFlMKpwhIaM</td>
+    <td></td>  
+  </tr>    
 </table>
 

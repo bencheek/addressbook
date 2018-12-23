@@ -120,13 +120,19 @@ NodeJs Nights 2018 / final project
   <tr>
     <td>Update address by key for the logged user</td>
     <td><b>PUT /addresses/{addressKey}</b></td>
-    <td>PUT /addresses/-LUM4cdsecFlMKpwhIaM <br/>
+    <td>
   {
     "firstName": "name2#",
     "lastName": "breed2#",
     "email": "1892#"
 }</td>
-    <td></td>  
+    <td>
+  {
+    "email": "1892#",
+    "firstName": "name2#",
+    "lastName": "breed2#"
+}
+  </td>  
   </tr>    
 </table>
 

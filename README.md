@@ -18,10 +18,12 @@ NodeJs Nights 2018 / final project
 <h3>API Description</h3> 
 
 <table>
-  <th><td>Operation</td></th> 
-  <th><td>URL</td></th>
-  <th><td>Request Example</td></th>  
-  <th><td>Response Example</td></th>  
+  <th>
+  <td>Operation</td>
+  <td>URL</td>
+  <td>Request Example</td> 
+  <td>Response Example</td>
+  </th>  
   <tr>
     <td>
       SignUp User

@@ -92,6 +92,25 @@ NodeJs Nights 2018 / final project
     }
 }      
     </td>  
-  </tr>  
+  </tr> 
+    <tr>
+    <td>
+      Get address by key for the logged user
+    </td>
+    <td>
+      <b>GET /addresses/{addressKey}</b>
+    </td>
+    <td>
+      GET /addresses/-LUM4cdsecFlMKpwhIaM
+    </td>
+    <td>
+{
+        "email": "woirrut@mohor.pl",
+        "firstName": "Mina Gilbert",
+        "lastName": "Isabelle Gordon"
+}      
+    </td>  
+  </tr>    
+  
 </table>
 

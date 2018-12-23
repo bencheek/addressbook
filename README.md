@@ -19,10 +19,10 @@ NodeJs Nights 2018 / final project
 
 <table>
   <th>
-  <td>Operation</td>
-  <td>URL</td>
-  <td>Request Example</td> 
-  <td>Response Example</td>
+  <td><b>Operation</b></td>
+  <td><b>URL</b></td>
+  <td><b>Request Example</b></td> 
+  <td><b>Response Example</b></td>
   </th>  
   <tr>
     <td>
@@ -49,5 +49,5 @@ NodeJs Nights 2018 / final project
 }
     </td>  
   </tr>
-</table
+</table>
 

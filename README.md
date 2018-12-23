@@ -25,12 +25,8 @@ NodeJs Nights 2018 / final project
   <th><b>Response Example</b></th>
   </tr>  
   <tr>
-    <td>
-      Sign Up User
-    </td>
-    <td>
-      <b>POST /users</b>
-    </td>
+    <td>Sign Up User</td>
+    <td><b>POST /users</b></td>
     <td>
       {
   "name" : "meno",
@@ -39,7 +35,6 @@ NodeJs Nights 2018 / final project
 }
     </td>
     <td>
-      ```
       {
     "name": "meno",
     "email": "zaphod@beeblebr56o5hx.me",
@@ -47,16 +42,12 @@ NodeJs Nights 2018 / final project
     "createdAt": "2018-12-23T06:40:22.300Z",
     "id": 4,
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTU0NTU0NzIyMiwiZXhwIjoxNTQ1NTUwODIyLCJpc3MiOiJjb20uc3Rydi5ub2RlanMtbmlnaHRzLnByb2R1Y3Rpb24ifQ.7tBaaeWPrSNMQG-rkZKeu-nhpm-cnq-KlZMUkodCbWw"
-}```
+}
     </td>  
   </tr>
     <tr>
-    <td>
-      Sign In User
-    </td>
-    <td>
-      <b>POST /sessions/user</b>
-    </td>
+    <td>Sign In User</td>
+    <td><b>POST /sessions/user</b></td>
     <td>
 {
   "name" : "meno",
@@ -75,13 +66,9 @@ NodeJs Nights 2018 / final project
 }
     </td>  
   </tr>
-    <tr>
-    <td>
-      Store new address for the logged user
-    </td>
-    <td>
-      <b>POST /addresses</b>
-    </td>
+<tr>
+    <td>Store new address for the logged user</td>
+    <td><b>POST /addresses</b></td>
     <td>
 {
     "firstName": "name",
@@ -97,17 +84,10 @@ NodeJs Nights 2018 / final project
 }   
     </td>  
   </tr>    
-    
-  
-    <tr>
-    <td>
-      Get all addresses for the logged user
-    </td>
-    <td>
-      <b>GET /addresses</b>
-    </td>
-    <td>
-    </td>
+  <tr>
+    <td> Get all addresses for the logged user</td>
+    <td><b>GET /addresses</b></td>
+    <td></td>
     <td>
 {
     "-LUM4cdsecFlMKpwhIaM": {
@@ -119,15 +99,9 @@ NodeJs Nights 2018 / final project
     </td>  
   </tr> 
     <tr>
-    <td>
-      Get address by key for the logged user
-    </td>
-    <td>
-      <b>GET /addresses/{addressKey}</b>
-    </td>
-    <td>
-      GET /addresses/-LUM4cdsecFlMKpwhIaM
-    </td>
+    <td>Get address by key for the logged user</td>
+    <td><b>GET /addresses/{addressKey}</b></td>
+    <td>GET /addresses/-LUM4cdsecFlMKpwhIaM</td>
     <td>
 {
         "email": "woirrut@mohor.pl",

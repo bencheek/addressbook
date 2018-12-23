@@ -76,6 +76,30 @@ NodeJs Nights 2018 / final project
   </tr>
     <tr>
     <td>
+      Store new address for the logged user
+    </td>
+    <td>
+      <b>POST /addresses</b>
+    </td>
+    <td>
+{
+    "firstName": "name",
+    "lastName": "breed",
+    "email": "benc@email.cz"
+}
+    </td>
+    <td>
+{
+    "firstName": "name",
+    "lastName": "breed",
+    "email": "benc@email.cz"
+}   
+    </td>  
+  </tr>    
+    
+  
+    <tr>
+    <td>
       Get all addresses for the logged user
     </td>
     <td>
